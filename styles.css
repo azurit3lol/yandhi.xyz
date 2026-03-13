@@ -4,6 +4,41 @@ padding:0;
 box-sizing:border-box;
 }
 
+.first {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* Matches your --mw variable */
+    margin: 0 auto;
+}
+
+.element {
+    position: absolute;
+    /* This calculates the position based on your HTML variables */
+    left: calc(var(--x) * 1rem * var(--g));
+    top: calc(var(--y) * 1rem * var(--g));
+    width: calc(var(--w) * 1rem * var(--g));
+    height: calc(var(--h) * 1rem * var(--g));
+    transform: rotate(calc(var(--r) * 1deg)) scale(var(--s));
+}
+
+.element img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.innerShape svg {
+    width: 100%;
+    height: 100%;
+    fill: #000;
+}
+
 body{
 background:#ffffff;
 font-family:'Yantramanav', sans-serif;
