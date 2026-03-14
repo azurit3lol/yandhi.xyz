@@ -9,47 +9,43 @@ body {
     font-family: 'Yantramanav', sans-serif;
     display: flex;
     justify-content: center;
+    min-height: 100vh;
 }
 
-.main-wrapper {
-    width: 100%;
-    max-width: 1200px;
+.content-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 40px 20px;
+    width: 100%;
+    max-width: 900px;
+    padding: 60px 20px;
 }
 
-/* CD Image */
-.hero {
+/* CD Scaling */
+.hero-cd {
     width: 100%;
-    max-width: 800px;
+    max-width: 700px;
     height: auto;
     margin-bottom: 20px;
 }
 
-.site-title {
-    font-weight: 900;
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
+.title { font-weight: 900; font-size: 2.8rem; }
+.subtitle { color: #555; margin-bottom: 30px; }
 
-/* Navbar Shapes */
-.navbar {
+.nav-container {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin: 30px 0;
     flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 
-.nav-btn {
-    width: 130px;
-    height: 55px;
-    background-image: url("https://files.strawcdn.com/straw/TSIVdGRJYHbTKFYiFXQG.png"); /* Grey */
+.btn-box {
+    width: 125px;
+    height: 52px;
+    background-image: url("https://files.strawcdn.com/straw/TSIVdGRJYHbTKFYiFXQG.png");
     background-size: 100% 100%;
-    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,66 +55,36 @@ body {
     transition: transform 0.2s;
 }
 
-.nav-btn.active {
-    background-image: url("https://files.strawcdn.com/straw/BVlqgCZFdsxtKGdkPqpp.png"); /* Pink */
+.btn-box.active {
+    background-image: url("https://files.strawcdn.com/straw/BVlqgCZFdsxtKGdkPqpp.png");
 }
 
-.nav-btn:hover {
-    transform: scale(1.1); /* Text/Box Scale */
-}
+.btn-box:hover { transform: scale(1.1); }
 
-/* Text Scales & Colors */
-.info-container {
-    margin-top: 40px;
-    max-width: 800px;
-}
+.info-text { max-width: 750px; }
 
-.scale-large {
-    font-size: 1.5rem; /* Equivalent to your 1.5 scale */
-    font-weight: 400;
-    margin-bottom: 15px;
-}
+.scale-1-5 { font-size: 1.5rem; margin: 20px 0; }
+.scale-1-2 { font-size: 1.2rem; margin-bottom: 20px; }
+.scale-1-15 { font-size: 1.15rem; }
 
-.scale-medium {
-    font-size: 1.2rem; /* Equivalent to your 1.2 scale */
-    margin-bottom: 25px;
-}
-
-.must-red {
-    color: rgb(168, 43, 34); /* Red from your code */
-    font-weight: 900;
-}
-
-.fairuse-pink {
-    color: rgb(222, 194, 200);
-    font-weight: 900;
-    text-decoration: underline;
-}
+.red-bold { color: rgb(168, 43, 34); font-weight: 900; }
+.pink-link { color: rgb(222, 194, 200); font-weight: 900; text-decoration: underline; }
 
 .features-list {
     text-align: left;
     display: inline-block;
-    font-size: 1.15rem; 
-    margin-top: 20px;
+    list-style-type: square;
+    margin-top: 10px;
 }
 
-.features-list li {
-    margin-bottom: 8px;
-}
-
-.alert-text {
-    margin-top: 50px;
-    font-size: 1.5rem;
-    font-weight: 900;
-    color: #000;
-}
+.unfinished-tag { font-weight: 900; color: #000; margin-top: 40px; }
 
 .donate-btn {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    width: 150px;
-    height: 65px;
+    width: 140px;
+    height: 60px;
     background-image: url("https://files.strawcdn.com/straw/IWZFmfxLplPNnrbNUvOO.png");
     background-size: 100% 100%;
     display: flex;
@@ -130,5 +96,5 @@ body {
 }
 
 @media (max-width: 768px) {
-    .nav-btn { width: 100px; height: 45px; font-size: 0.8rem; }
+    .btn-box { width: 100px; height: 45px; font-size: 0.8rem; }
 }
