@@ -165,54 +165,7 @@ A platform for audio downloads! Explore hundreds of files uploaded by our commun
 
 <div class="section">
 
-<meta charset="UTF-8">
-<title>Index of all files</title>
-
-<style>
-
-body{
-font-family: monospace;
-background:#f4f4f4;
-padding:40px;
-}
-
-#list{
-width:100%;
-border-collapse:collapse;
-background:white;
-}
-
-#list th{
-text-align:left;
-padding:10px;
-background:#e6e6e6;
-}
-
-#list td{
-padding:10px;
-border-bottom:1px solid #ddd;
-}
-
-#list tr:hover{
-background:#f7f7f7;
-}
-
-a{
-color:#0366d6;
-text-decoration:none;
-}
-
-a:hover{
-text-decoration:underline;
-}
-
-</style>
-
-</head>
-
-<body>
-
-<h1>Index of all files</h1>
+<h2>Index of files</h2>
 
 <table id="list">
 <thead>
@@ -225,34 +178,6 @@ text-decoration:underline;
 
 <tbody id="fileTable">
 </tbody>
-
 </table>
 
-<script>
-
-fetch("../files.json")
-.then(res => res.json())
-.then(files => {
-
-const table = document.getElementById("fileTable");
-
-files.forEach(file => {
-
-let row = document.createElement("tr");
-
-row.innerHTML = `
-<td><a href="${file.name}">${file.name}</a></td>
-<td>${file.size}</td>
-<td>${file.date}</td>
-`;
-
-table.appendChild(row);
-
-});
-
-});
-
-</script>
-
-</body>
-</html>
+</div>
