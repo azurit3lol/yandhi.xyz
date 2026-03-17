@@ -5,10 +5,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>yandhi.xyz</title>
+<title>Files - yandhi.xyz</title>
 
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-  
+<link rel="icon" href="../favicon.ico">
+
 <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@400;900&display=swap" rel="stylesheet">
 
 <style>
@@ -34,8 +34,7 @@ max-width:900px;
 width:100%;
 }
 
-/* Yandhi minidisc image might not be scaled properly. If it isn't report usig contact. */
-
+/* HEADER IMAGE */
 .hero{
 width:100%;
 max-width:650px;
@@ -43,6 +42,7 @@ margin:40px auto;
 display:block;
 }
 
+/* TITLE */
 .title{
 font-size:60px;
 font-weight:900;
@@ -50,11 +50,13 @@ color:#b297be;
 margin-bottom:10px;
 }
 
+/* DESCRIPTION */
 .description{
 font-size:18px;
 margin-bottom:40px;
 }
 
+/* NAVBAR */
 .navbar{
 display:flex;
 flex-wrap:wrap;
@@ -82,6 +84,7 @@ color:black;
 background-image:url("https://files.strawcdn.com/straw/BVlqgCZFdsxtKGdkPqpp.png");
 }
 
+/* DONATE BUTTON */
 .donate{
 position:fixed;
 right:20px;
@@ -100,22 +103,44 @@ text-decoration:none;
 color:black;
 }
 
+/* FILE TABLE */
 .section{
 margin-top:40px;
-font-size:18px;
-line-height:1.6;
+width:100%;
 }
 
-ul{
-margin-top:15px;
+#list{
+width:100%;
+border-collapse:collapse;
+background:#f7f7f7;
+margin-top:20px;
+}
+
+#list th{
 text-align:left;
-display:inline-block;
+padding:10px;
+background:#e6e6e6;
 }
 
-li{
-margin-bottom:10px;
+#list td{
+padding:10px;
+border-bottom:1px solid #ddd;
 }
 
+#list tr:hover{
+background:#efefef;
+}
+
+a{
+color:#0366d6;
+text-decoration:none;
+}
+
+a:hover{
+text-decoration:underline;
+}
+
+/* MOBILE */
 @media (max-width:700px){
 
 .hero{
@@ -148,19 +173,16 @@ height:60px;
 <h1 class="title">yandhi.xyz</h1>
 
 <p class="description">
-A platform for audio downloads! Explore hundreds of files uploaded by our community.
+Browse all uploaded files from the community.
 </p>
 
 <div class="navbar">
-
-<a href="./" class="nav-btn active">Home</a>
-<a href="./files" class="nav-btn">Files</a>
-<a href="./upload" class="nav-btn">Upload</a>
-<a href="./faq" class="nav-btn">FAQ</a>
-<a href="./rules" class="nav-btn">Rules</a>
-<a href="./donate" class="donate-btn">Donate</a>
-<a href="./contact" class="nav-btn">Contact</a>
-
+<a href="../" class="nav-btn">Home</a>
+<a href="./" class="nav-btn active">Files</a>
+<a href="../upload" class="nav-btn">Upload</a>
+<a href="../faq" class="nav-btn">FAQ</a>
+<a href="../rules" class="nav-btn">Rules</a>
+<a href="../contact" class="nav-btn">Contact</a>
 </div>
 
 <div class="section">
@@ -176,19 +198,19 @@ A platform for audio downloads! Explore hundreds of files uploaded by our commun
 </tr>
 </thead>
 
-<tbody id="fileTable">
-</tbody>
+<tbody id="fileTable"></tbody>
+
 </table>
 
 </div>
 
 </div>
 
-  <script>
+<a href="../donate" class="donate">Donate</a>
 
 <script>
 
-fetch("files.json")
+fetch("../files.json")
 .then(res => res.json())
 .then(files => {
 
