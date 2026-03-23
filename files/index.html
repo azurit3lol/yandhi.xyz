@@ -183,7 +183,7 @@ A platform for audio downloads! Explore hundreds of files uploaded by our commun
 
 <script>
 
-fetch("filelist.json")
+  fetch("filelist.json")
 .then(res => res.json())
 .then(files => {
 
@@ -197,6 +197,7 @@ row.innerHTML = `
 <td><a href="${file.name}">${file.name}</a></td>
 <td>${file.size}</td>
 <td>${file.date}</td>
+<td>${file.comment || ""}</td>
 `;
 
 table.appendChild(row);
@@ -204,7 +205,6 @@ table.appendChild(row);
 });
 
 });
-
 </script>
 
 </body>
